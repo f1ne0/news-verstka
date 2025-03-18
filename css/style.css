@@ -1,0 +1,375 @@
+*,
+*::before,
+*::after {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    outline: none;
+
+}
+
+body {
+    background-color: #222;
+    font-family: var(--font-roboto);
+    color: var(--color-white);
+    transition: background-color 0.3s, color 0.3s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+
+:root {
+    --color-green: #00A562;
+    --color-white: #fff;
+    --color-green-hover: #01cd7c;
+    --color-title: #333;
+    --color-desc: #4e4e4e;
+    --font-roboto: "Roboto", sans-serif;
+    --bg-grey: #b6b6b6;
+}
+
+/* =========================scrol========================= */
+/* width */
+::-webkit-scrollbar {
+    width: 7px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: var(--color-desc);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: var(--color-green);
+    border-radius: 100px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: var(--color-green-hover);
+}
+
+/* =========================scrol========================= */
+h1,p{
+    color: var(--bg-grey);
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--color-title);
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    display: inline-block;
+}
+
+button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    display: inline-block;
+}
+
+span,
+i,
+input,
+textarea,
+select {
+    display: inline-block;
+}
+
+img {
+    display: inline-block;
+    max-width: 100%;
+    height: auto;
+}
+
+.container {
+    max-width: 1500px;
+    width: 100%;
+    margin-inline: auto;
+    padding: 0px 20px;
+}
+
+
+
+
+/* ==================DELETE============================= */
+.dark-mode {
+    background-color: #fff;
+    /* Цвет фона для темной темы */
+    color: #333;
+    /* Цвет текста для темной темы */
+}
+
+.themebtn {
+    position: fixed;
+    left: 10%;
+    top: 3%;
+    z-index: 10;
+}
+
+/* ==================DELETE============================= */
+
+
+
+
+/* =============================SIDEBAR============================= */
+
+.sidebar {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+    background-color: #1e1f1e;
+    padding: 20px 0px 32px 32px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, .5);
+}
+
+.logotype>a>img {
+    height: 29px;
+    width: 58px;
+    margin-bottom: 6px;
+}
+
+.sidebar-search {
+    margin-top: 40px !important;
+}
+
+.sidebar-search i {
+    font-size: 13px;
+    font-weight: 100;
+    transform: translateY(-18%);
+}
+
+.sidebar-list {
+    width: 178px;
+    height: 100%;
+}
+
+.sidebar-list li {
+    margin-top: 8px;
+}
+
+.sidebar-list a {
+    color: #fff;
+    font-size: 16px;
+    font-weight: 300;
+    transition: color 200ms;
+}
+
+.sidebar-list a:hover {
+    color: var(--color-green-hover);
+}
+
+/* =============================BODY============================= */
+.source {
+    margin-left: 210px;
+}
+
+.news-card {
+    display: flex;
+    background-color: #333;
+    border: 1px solid #444;
+    padding: 20px;
+    border-radius: 8px;
+    width: 800px;
+    margin-bottom: 20px;
+}
+
+.news-content {
+    flex: 2;
+}
+.news-content h1 {
+  color: var(--color-white);
+  transition:  color 300ms;
+}
+.news-content h1:hover {
+  color: var(--color-green-hover);
+}
+
+.category {
+    color: #4CAF50;
+    font-size: 14px;
+    margin: 0;
+}
+
+.title {
+    font-size: 24px;
+    margin: 10px 0;
+}
+
+.author-time {
+    color: #aaa;
+    font-size: 14px;
+    margin: 10px 0;
+}
+
+.author-time span {
+    display: inline-block;
+    margin-left: 10px;
+}
+
+.description {
+    font-size: 16px;
+    margin: 10px 0;
+}
+
+.news-image {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    /* Ensures that the scaled image stays within its container */
+    border-radius: 8px;
+}
+
+.news-image img {
+    max-width: 100%;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+    /* Smooth transition for the zoom effect */
+}
+
+.news-image img:hover {
+    transform: scale(1.1);
+    /* Zooms in the image */
+}
+
+/*===================================LOGIN============================================*/
+
+/* .login-body {} */
+
+.box {
+    width: 500px;
+    height: 500px;
+    background-color: #0C141E;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0 12px #1414145b;
+
+
+    padding: 65px;
+    border-radius: 20px;
+}
+
+.box>h1 {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 55px;
+    color: var(--color-white);
+}
+
+.form-box {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.input-group>input {
+    font-size: 18px;
+    font-weight: 300;
+    border: none;
+    padding: 10px 10px;
+    color: var(--color-white);
+    background-color: #1414145b;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom: 1px solid var(--color-white);
+}
+
+.input-group input::placeholder {
+    font-weight: 300;
+    font-size: 15px;
+    color: #cecece;
+    transition: color 300ms;
+}
+
+.input-group input:focus::placeholder {
+    color: transparent;
+}
+
+.login-forgot {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 5px;
+    font-size: 17px;
+    font-weight: 300;
+    color: var(--color-white);
+}
+
+.login-forgot a {
+    color: #00A562;
+}
+
+.login-forgot a:hover {
+    text-decoration: underline;
+}
+
+.login-forgot>p {
+    display: flex;
+    gap: 7px;
+}
+
+.login-forgot input {
+    accent-color: var(--color-green);
+}
+
+/* #20334A */
+.login-btn {
+    background-color: var(--color-green);
+    padding: 15px 10px;
+    color: var(--color-white);
+    border: none;
+    border-radius: 80px;
+    transition: background-color 400ms;
+}
+
+.login-btn:hover {
+    background-color: var(--color-green-hover);
+}
+
+.form-register {
+    color: var(--color-white);
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    font-weight: 300;
+}
+
+.form-register>a {
+    color: var(--color-green);
+}
+
+.form-register>a:hover {
+    text-decoration: underline;
+}
+/* ===========================test========================= */
+.search-input {
+    width: 100%;
+    padding: 8px;
+    margin-top: 10px;
+    display: none;
+}
